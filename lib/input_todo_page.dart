@@ -16,7 +16,7 @@ class _InputTodoPageState extends State<InputTodoPage> {
   final _titleController = TextEditingController();
   final _descriptionController = TextEditingController();
   final _dueDateController = TextEditingController();
-  final _notesController = TextEditingController(); // Controller untuk notes
+  final _notesController = TextEditingController(); 
   String _priority = 'IMPORTANT';
   DateTime _dueDate = DateTime.now();
   String _status = 'On Progress';
@@ -31,7 +31,7 @@ class _InputTodoPageState extends State<InputTodoPage> {
       _dueDate = widget.todo!.dueDate;
       _status = widget.todo!.status;
       _dueDateController.text = _formatDate(_dueDate);
-      _notesController.text = widget.todo!.notes; // Isi notes saat edit
+      _notesController.text = widget.todo!.notes; 
     } else {
       _dueDateController.text = _formatDate(_dueDate);
     }
@@ -138,7 +138,8 @@ class _InputTodoPageState extends State<InputTodoPage> {
                     ..priority = _priority
                     ..dueDate = _dueDate
                     ..status = _status
-                    ..notes = _notesController.text; // Simpan notes
+                    ..notes = _notesController.text; 
+                  
 
                   final box = Hive.box<Todo>('todos');
                   if (widget.index == null) {
