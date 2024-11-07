@@ -20,13 +20,15 @@ class _TodoListPageState extends State<TodoListPage> {
         return Card(
           margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           child: ListTile(
-            title: Text(todo.title, style: TextStyle(fontWeight: FontWeight.bold)),
+            title:
+                Text(todo.title, style: TextStyle(fontWeight: FontWeight.bold)),
             subtitle: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(todo.description),
                 Text('Prioritas: ${todo.priority}'),
-                Text('Due Date: ${todo.dueDate.toLocal().toString().split(' ')[0]}'),
+                Text(
+                    'Due Date: ${todo.dueDate.toLocal().toString().split(' ')[0]}'),
                 Text('Status: ${todo.status}'),
               ],
             ),
@@ -39,16 +41,40 @@ class _TodoListPageState extends State<TodoListPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => InputTodoPage(todo: todo, index: index),
+                        builder: (context) =>
+                            InputTodoPage(todo: todo, index: index),
                       ),
                     ).then((value) => setState(() {}));
                   },
                 ),
                 IconButton(
                   icon: Icon(Icons.delete),
-                  onPressed: () {
-                    todoBox.deleteAt(index);
-                    setState(() {});
+                  onPressed: () async {
+                    final shouldDelete = await showDialog<bool>(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Are you sure?'),
+                          content:
+                              Text('Do you really want to delete this item?'),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.of(context).pop(false),
+                              child: Text('Cancel'),
+                            ),
+                            TextButton(
+                              onPressed: () => Navigator.of(context).pop(true),
+                              child: Text('Delete'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+
+                    if (shouldDelete == true) {
+                      todoBox.deleteAt(index);
+                      setState(() {});
+                    }
                   },
                 ),
               ],
