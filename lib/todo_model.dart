@@ -18,4 +18,7 @@ class Todo extends HiveObject {
 
   @HiveField(4)
   late String status;
+
+  @HiveField(5)
+  String notes = '';
 }

@@ -16,6 +16,7 @@ class _InputTodoPageState extends State<InputTodoPage> {
   final _titleController = TextEditingController();
   final _descriptionController = TextEditingController();
   final _dueDateController = TextEditingController();
+  final _notesController = TextEditingController(); // Controller untuk notes
   String _priority = 'IMPORTANT';
   DateTime _dueDate = DateTime.now();
   String _status = 'On Progress';
@@ -30,6 +31,7 @@ class _InputTodoPageState extends State<InputTodoPage> {
       _dueDate = widget.todo!.dueDate;
       _status = widget.todo!.status;
       _dueDateController.text = _formatDate(_dueDate);
+      _notesController.text = widget.todo!.notes; // Isi notes saat edit
     } else {
       _dueDateController.text = _formatDate(_dueDate);
     }
@@ -119,6 +121,14 @@ class _InputTodoPageState extends State<InputTodoPage> {
               }).toList(),
             ),
             SizedBox(height: 16),
+            TextField(
+              controller: _notesController,
+              decoration: InputDecoration(
+                labelText: 'Notes',
+                border: UnderlineInputBorder(),
+              ),
+            ),
+            SizedBox(height: 16),
             Center(
               child: ElevatedButton(
                 onPressed: () {
@@ -127,7 +137,8 @@ class _InputTodoPageState extends State<InputTodoPage> {
                     ..description = _descriptionController.text
                     ..priority = _priority
                     ..dueDate = _dueDate
-                    ..status = _status;
+                    ..status = _status
+                    ..notes = _notesController.text; // Simpan notes
 
                   final box = Hive.box<Todo>('todos');
                   if (widget.index == null) {
@@ -143,7 +154,6 @@ class _InputTodoPageState extends State<InputTodoPage> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
                 ),
               ),
             ),

@@ -26,10 +26,11 @@ class _TodoListPageState extends State<TodoListPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(todo.description),
-                Text('Prioritas: ${todo.priority}'),
+                Text('Priority: ${todo.priority}'),
                 Text(
                     'Due Date: ${todo.dueDate.toLocal().toString().split(' ')[0]}'),
                 Text('Status: ${todo.status}'),
+                Text('Notes: ${todo.notes}'),
               ],
             ),
             trailing: Row(
