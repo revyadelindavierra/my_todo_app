@@ -1,16 +1,48 @@
-# my_todo_app
+# My Todo App
 
-A new Flutter project.
+A Flutter project designed to help users manage their tasks efficiently.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Add, edit, and delete tasks.
+- Mark tasks as complete or incomplete.
+- Organize tasks with categories or tags.
+- Set due dates and reminders.
+- Search and filter tasks.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Structure
+
+```
+my_todo_app/
+├── android/            # Android-specific files
+├── ios/                # iOS-specific files
+├── lib/                # Dart source code
+├── test/               # Unit and widget tests
+├── web/                # Web-specific files
+├── windows/            # Windows-specific files
+├── macos/              # macOS-specific files
+├── linux/              # Linux-specific files
+├── assets/             # Application assets (images, fonts, etc.)
+├── pubspec.yaml        # Project metadata and dependencies
+└── README.md           # Project documentation
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out:
+
+- Name: Revy Adelinda Vierra
+- GitHub: [revyadelindavierra](https://github.com/revyadelindavierra)
+
+Happy coding! 🚀
+```
