@@ -1,9 +1,5 @@
 # My Todo App
 
-A Flutter project designed to help users manage their tasks efficiently.
-
----
-
 ## Features
 
 - Add, edit, and delete tasks.
@@ -11,8 +7,6 @@ A Flutter project designed to help users manage their tasks efficiently.
 - Organize tasks with categories or tags.
 - Set due dates and reminders.
 - Search and filter tasks.
-
----
 
 ## Project Structure
 
@@ -29,11 +23,6 @@ my_todo_app/
 ├── pubspec.yaml        # Project metadata and dependencies
 └── README.md           # Project documentation
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
 
 ## Contact
 
