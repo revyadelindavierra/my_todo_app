@@ -16,7 +16,6 @@ A Flutter project designed to help users manage their tasks efficiently.
 
 ## Project Structure
 
-```
 my_todo_app/
 ├── android/            # Android-specific files
 ├── ios/                # iOS-specific files
@@ -29,7 +28,6 @@ my_todo_app/
 ├── assets/             # Application assets (images, fonts, etc.)
 ├── pubspec.yaml        # Project metadata and dependencies
 └── README.md           # Project documentation
-```
 
 ## License
 
@@ -43,6 +41,6 @@ If you have any questions or suggestions, feel free to reach out:
 
 - Name: Revy Adelinda Vierra
 - GitHub: [revyadelindavierra](https://github.com/revyadelindavierra)
+- Linkedin: [revyadelindavierra](www.linkedin.com/in/revyvierra)
 
 Happy coding! 🚀
-```
