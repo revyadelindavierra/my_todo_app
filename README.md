@@ -10,18 +10,20 @@
 
 ## Project Structure
 
+```markdown
 my_todo_app/
-├── android/            # Android-specific files
-├── ios/                # iOS-specific files
-├── lib/                # Dart source code
-├── test/               # Unit and widget tests
-├── web/                # Web-specific files
-├── windows/            # Windows-specific files
-├── macos/              # macOS-specific files
-├── linux/              # Linux-specific files
-├── assets/             # Application assets (images, fonts, etc.)
-├── pubspec.yaml        # Project metadata and dependencies
-└── README.md           # Project documentation
+├── **android/**            - Android-specific files  
+├── **ios/**                - iOS-specific files  
+├── **lib/**                - Dart source code  
+├── **test/**               - Unit and widget tests  
+├── **web/**                - Web-specific files  
+├── **windows/**            - Windows-specific files  
+├── **macos/**              - macOS-specific files  
+├── **linux/**              - Linux-specific files  
+├── **assets/**             - Application assets (images, fonts, etc.)  
+├── **pubspec.yaml**        - Project metadata and dependencies  
+└── **README.md**           - Project documentation  
+```
 
 
 ## Contact
